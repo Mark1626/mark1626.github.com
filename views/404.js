@@ -1,10 +1,7 @@
-var html = require('choo/html')
+const html = require('choo/html')
+const TITLE = 'Showcase - route not found'
 
-var TITLE = 'Showcase - route not found'
-
-module.exports = view
-
-function view (state, emit) {
+module.exports = (state, emit) => {
   if (state.title !== TITLE) emit(state.events.DOMTITLECHANGE, TITLE)
   return html`
     <body class="sans-serif pa3">
