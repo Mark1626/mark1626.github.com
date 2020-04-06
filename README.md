@@ -1,5 +1,6 @@
-# Showcase
-A showcase to display my work
+# Showcase [![Build Status](https://travis-ci.com/M4rk9696/showcase.svg?branch=master)](https://travis-ci.com/M4rk9696/showcase)
+
+A showcase to display my work. [Live Here](https://m4rk9696.github.io/showcase/)
 
 ## Commands
 Command                | Description                                      |
