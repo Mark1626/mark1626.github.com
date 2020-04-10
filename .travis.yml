@@ -9,7 +9,7 @@ script: yarn build
 
 branches:
   only:
-    - master
+    - source
 
 deploy:
   provider: pages
@@ -17,6 +17,6 @@ deploy:
   github-token: $GITHUB_TOKEN
   keep-history: true
   local-dir: dist
-  target-branch: gh-pages
+  target-branch: master
   on:
-    branch: master
+    branch: source
