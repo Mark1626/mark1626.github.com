@@ -35,6 +35,12 @@ module.exports = {
       active: true,
       desc: "A common bookmark aggregater",
       url: "https://github.com/M4rk9696/de-books",
+    },
+    {
+      title: "Mish",
+      active: true,
+      desc: "A minimal theme for fish",
+      url: "https://github.com/M4rk9696/theme-mish",
     }
   ]
 }
