@@ -41,6 +41,18 @@ module.exports = {
       active: true,
       desc: "A minimal theme for fish",
       url: "https://github.com/mark1626/theme-mish",
+    },
+    {
+      title: "Dr StrangeLove Logo",
+      active: true,
+      desc: "A minimal theme for fish",
+      url: "https://mark1626.github.io/dr-strangelove-logo",
+    },
+    {
+      title: "Paraphernalia",
+      active: true,
+      desc: "A collection of minor spikes I do",
+      url: "https://github.com/mark1626/Paraphernalia"
     }
   ]
 }
