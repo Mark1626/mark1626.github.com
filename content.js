@@ -45,7 +45,7 @@ module.exports = {
     {
       title: "Dr StrangeLove Logo",
       active: true,
-      desc: "A minimal theme for fish",
+      desc: "A small recreation I made of the Dr StrangeLove Logo in CSS",
       url: "https://mark1626.github.io/dr-strangelove-logo",
     },
     {

@@ -4,11 +4,11 @@ import ContentCard from "./ContentCard";
 
 export default () => {
   return (
-    <div class="code lh-copy">
+    <div className="code lh-copy">
       <article>
-        <div class="cf pa2 self-center">
-          {content.map(({ name, desc }) => (
-            <ContentCard name={name} desc={desc} />
+        <div className="cf pa2 self-center">
+          {content.map(({ name, desc, url }) => (
+            <ContentCard name={name} desc={desc} url={url} />
           ))}
         </div>
       </article>

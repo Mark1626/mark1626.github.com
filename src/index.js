@@ -1,5 +1,6 @@
 import React from "react";
-import { render } from "react-dom";
+import { render, hydrate } from "react-dom";
+import App from './App'
 import "tachyons";
 
 render(<App />, document.getElementById("main"));

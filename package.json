@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "parcel src/index.js",
-    "start": "parcel build src/index.js"
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html"
   },
   "dependencies": {
     "react": "^16.13.1",
