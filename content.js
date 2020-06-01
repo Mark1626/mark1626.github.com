@@ -53,6 +53,12 @@ module.exports = {
       active: true,
       desc: "A collection of minor spikes I do",
       url: "https://github.com/mark1626/Paraphernalia"
-    }
+    },
+    {
+      title: "Avatar Generator",
+      active: true,
+      desc: "Generates avator to use for projects",
+      url: "https://avatar-generator-six.now.sh"
+     }
   ]
 }
