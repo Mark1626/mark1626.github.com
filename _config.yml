@@ -1,0 +1,8 @@
+url: "https://mark1626.github.io"
+remote_theme: tareqdandachi/jekyll-shell-theme
+plugins:
+  - jekyll-feed
+highlighter: rouge
+header_pages:
+  - index.md
+  - about.md
