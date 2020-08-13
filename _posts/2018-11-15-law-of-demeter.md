@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Different ways of packing JAR in Java"
+title: "Law of Demeter"
 author: Nimalan
-tag: java design
+tags: java design
 ---
 
 # Law of Demeter
