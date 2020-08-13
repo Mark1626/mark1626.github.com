@@ -6,6 +6,7 @@ remote_theme: tareqdandachi/jekyll-shell-theme
 github_username: mark1626
 plugins:
   - jekyll-feed
+  - jemoji
 highlighter: rouge
 font-size: large
 header_pages:

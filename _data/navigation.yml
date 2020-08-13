@@ -1,0 +1,10 @@
+- name: Home
+  link: /
+- name: About
+  link: /about.html
+- name: Micro Blog
+  link: /micro-blog/twtxt.txt
+- name: Blog
+  link: /blog.html
+- name: Knowledge Repo
+  link: /knowledge/
