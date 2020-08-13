@@ -1,8 +1,13 @@
+title: Mark1626 Home Page
+description: >- 
+  An unsettling mind on an endless search for inspiration.
 url: "https://mark1626.github.io"
 remote_theme: tareqdandachi/jekyll-shell-theme
+github_username: mark1626
 plugins:
   - jekyll-feed
 highlighter: rouge
+font-size: large
 header_pages:
   - index.md
   - about.md
