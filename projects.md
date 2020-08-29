@@ -1,8 +1,8 @@
 ---
 layout: page
-permalink: /about
-permalink_name: /about
-title: About me
+permalink: /projects
+permalink_name: /projects
+title: Projects
 ---
 
 # Projects
