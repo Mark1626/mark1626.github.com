@@ -18,6 +18,8 @@ This list contains a list of pet projects I use everyday.
 
 <img src="https://raw.githubusercontent.com/Mark1626/home-blocks/master/demo.png" alt="home blocks" width="750" height="375"/>
 
+---
+
 ## Spin To Win
 
 - PWA, spinner I made for fun
@@ -28,12 +30,16 @@ This list contains a list of pet projects I use everyday.
 
 <img src="https://raw.githubusercontent.com/Mark1626/spin-to-win/master/spin-to-win.png" width="750" height="375"/>
 
+---
+
 ## Knowledge
 
 List of tidbits I learn
 
 [Source](https://github.com/Mark1626/knowledge)
 [Live At](https://mark1626.github.io/knowledge/)
+
+---
 
 ## Avatar Generator
 
@@ -42,12 +48,16 @@ List of tidbits I learn
 [Source](https://github.com/Mark1626/avatar-generator)
 [Live At](https://avatar-generator-six.now.sh/)
 
+---
+
 ## Senbazuru
 
 - Burndown chart progress tracker
 
 [Source](https://github.com/Mark1626/senbazuru)
 [Live At](https://mark1626.github.io/senbazuru/)
+
+---
 
 ## Tiddier
 
@@ -63,4 +73,5 @@ body {
 ```
 
 [Source](https://github.com/Mark1626/Tiddier)
- 
+
+--- 
