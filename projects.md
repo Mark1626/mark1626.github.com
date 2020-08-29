@@ -26,7 +26,7 @@ This list contains a list of pet projects I use everyday.
 [Source](https://github.com/Mark1626/spin-to-win)
 [Live At](https://mark1626.github.io/spin-to-win/)
 
-![Spin To Win](https://raw.githubusercontent.com/Mark1626/spin-to-win/master/spin-to-win.png)
+![Spin To Win](https://raw.githubusercontent.com/Mark1626/spin-to-win/master/spin-to-win.png =750x375)
 
 ## Knowledge
 
