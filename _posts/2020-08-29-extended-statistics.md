@@ -13,7 +13,7 @@ First we need to ask ourselves the following questions
   + When we do a query the planner will need to estimate the number of rows to
   retrieve from the table. To do this infomation is stored in the table `pg_statistic`
   + Entries here are updated by `ANALYSE` and are always kept up to date, in
-  the example I would be showing a case where that occurs[^1]
+  the example I would be showing a case where that occurs
   + The statistics stored however are for a single column
 - What is an extended statistics?
   + An extended statistics is something an user can create
@@ -36,8 +36,6 @@ insert into t1 select i/1000, i/500 from generate_series(1, 1000000) s(i);
 
 Things to note
 - Data of column a and b have correlation between each other
-
-> **Note:** I've set `max_parallel_workers_per_gather`, for the reason of this skip to this column[^2]
 
 ---
 
@@ -139,11 +137,10 @@ Time: 0.059s
 
 Why is this just not about `extended statistics` and why is this case study also about `indexes`?
 
-When we generally encounter a performance problem our general instinct is to 
-create a query on the column; which is effective, but adding more and more 
-indexes would cause the table to be reindexed for each write. If in the case 
-the columns are correlated, we could use `extended statistics` without 
-comprimising the write.
+When we generally encounter a performance problem our general instinct is to create
+a query on the column; which is effective, but adding more and more indexes
+would cause the table to be reindexed for each write. If in the case the
+columns are correlated, we could use `extended statistics` without comprimising the write.
 
 This is the performance without index
 
