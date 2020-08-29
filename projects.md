@@ -16,7 +16,7 @@ This list contains a list of pet projects I use everyday.
 
 [Source](https://github.com/Mark1626/spin-to-win/home-blocks/)
 
-![Home Blocks](https://raw.githubusercontent.com/Mark1626/home-blocks/master/demo.png)
+<img src="https://raw.githubusercontent.com/Mark1626/home-blocks/master/demo.png" alt="home blocks" width="750" height="375"/>
 
 ## Spin To Win
 
@@ -26,7 +26,7 @@ This list contains a list of pet projects I use everyday.
 [Source](https://github.com/Mark1626/spin-to-win)
 [Live At](https://mark1626.github.io/spin-to-win/)
 
-![Spin To Win](https://raw.githubusercontent.com/Mark1626/spin-to-win/master/spin-to-win.png =750x375)
+<img src="https://raw.githubusercontent.com/Mark1626/spin-to-win/master/spin-to-win.png" width="750" height="375"/>
 
 ## Knowledge
 
