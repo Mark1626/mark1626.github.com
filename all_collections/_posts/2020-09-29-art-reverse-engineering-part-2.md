@@ -26,7 +26,11 @@ The whole code is in unicode, this is to reduce the size of the whole code.
 Let's evaluate the unicode to utf-8
 
 ```js
+
+
 for(i=h=540,O=q=>(Math.random()*2-1)*w;i--;x.clearRect(h+i%2*45,256+(i%4/2|0)*90,35,80))x.fillRect(X=(w=960)+O(),Y=h+O(),s=w/(t%8)/9,s,x.fillStyle=`hsl(150 99%${(Math.hypot(X-w,Y-h)/180)**3}%`);
+
+
 ```
 
 ---
