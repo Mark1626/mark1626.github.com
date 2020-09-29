@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Reverse Engineering Code Art"
+title: "Reverse Engineering Code Art - Part 1"
 author: Nimalan
 tags: dev reverse-engineering
 ---
