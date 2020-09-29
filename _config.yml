@@ -3,7 +3,7 @@ github_username: mark1626
 description: >- 
   An unsettling mind on an endless search for inspiration.
 url: "https://mark1626.github.io"
-remote_theme: tareqdandachi/jekyll-shell-theme
+remote_theme: "dracula/gh-pages"
 sass:
   style: compressed
 plugins:
