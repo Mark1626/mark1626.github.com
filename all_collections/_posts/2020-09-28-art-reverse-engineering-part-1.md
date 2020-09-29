@@ -11,7 +11,7 @@ tags: dev reverse-engineering
 
 This incredibly amazing piece of code produces 48 procedurally generated sprites on screen
 
-![Sprite sheet screenshot](/images/screenshot_sprite.png)
+![Sprite sheet screenshot](/assets/images/screenshot_sprite.png)
 
 ```js
 for(i=2e3;!t&&i--;Math.random()>(X**2+(Y-4)**2)**.5/6&&f(7)+f(-7))X=i&3,Y=i>>2&7,f=m=>x.fillRect(240*(i>>5&7)+120-X*m,180*(i>>8)+50+Y*7,7,7)
