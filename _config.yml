@@ -1,18 +1,40 @@
 title: Mark1626 Home Page
-github_username: mark1626
-description: >- 
-  An unsettling mind on an endless search for inspiration.
+markdown: kramdown
 url: "https://mark1626.github.io"
-remote_theme: "dracula/gh-pages"
-sass:
-  style: compressed
+baseurl: "/"
+
+# for atom feed
+author:
+  name: Nimalan aka Mark1626
+  email: nimalan.dev@protonmail.com
+
 plugins:
-  - jekyll-feed
+  - jekyll-paginate
   - jemoji
-highlighter: rouge
-font-size: large
-header_pages:
-  - index.md
-  - about.md
-  - blog.md
-  - projects.md
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+paginate_path: "/page:num/"
+
+paginate: 5
+
+collections_dir: all_collections
+collections:
+  posts:
+    output: true
+  projects:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "post"
+  - scope:
+      path: "_posts"
+    values:
+      layout: "post"
+      permalink: /posts/:categories/:year/:month/:day/:title/
+
+exclude: ["sitemap.xml", "feed.xml", "content.js", "README.md"]

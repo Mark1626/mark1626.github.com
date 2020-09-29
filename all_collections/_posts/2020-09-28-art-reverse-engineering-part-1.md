@@ -5,8 +5,7 @@ author: Nimalan
 tags: dev reverse-engineering
 ---
 
-URL - https://www.dwitter.net/d/3078  
-Author - https://www.dwitter.net/u/FireFly
+[Original Dwitter](https://www.dwitter.net/d/3078) by [FireFly](https://www.dwitter.net/u/FireFly)
 
 [TLDR](#summary)
 
