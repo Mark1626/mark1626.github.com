@@ -9,7 +9,7 @@ tags: dev reverse-engineering
 
 [TLDR](#summary)
 
-This incredibly amazing piece of code produces 48 procedurally generated sprites on screen
+This incredibly amazing piece of code produces 48 procedural generated sprites on screen
 
 ![Sprite sheet screenshot](/assets/images/screenshot_sprite.png)
 

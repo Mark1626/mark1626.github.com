@@ -40,9 +40,8 @@ Now let's rearrange it a bit
 Hmm, not much improvement in understanding the code yet
 
 Notes:
-- `c.width = 608` is to clear the canvas at the start of the animation
-- The effect of rotation is handled by `Math.sin(a)` where `A = i / 5.1 + t`
-- `(i >> 5)` is used in y coordinate and `(i < 256)` is used as a boolean in x coordinate
+- `c.width = 608` is to clear the canvas at the start of the animation frame
+- The effect of rotation is handled by the `304 + (Math.sin(A) * 80), 99 + (Math.cos(A) * 8)` where `A = i / 5.1 + t`
 
 ```js
 c.width = 608;

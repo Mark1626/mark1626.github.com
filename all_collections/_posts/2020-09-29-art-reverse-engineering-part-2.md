@@ -4,7 +4,7 @@ title: "Reverse Engineering Code Art - Part 2"
 author: Nimalan
 tags: dev reverse-engineering
 ---
-Analysing `The eye of the storm`
+Analyzing `The eye of the storm`
 
 [Original Dwitter](https://www.dwitter.net/d/20096) by [cantelope](https://www.dwitter.net/u/cantelope)
 
@@ -22,8 +22,8 @@ eval(unescape(escape`𩡯𬠨𪐽𪀽𝐴𜀬𣰽𬐽🠨𣑡𭁨𛡲𨑮𩁯�
 
 ---
 
-The whole code is in unicode, this is to reduce the size of the whole code.
-Let's evaluate the unicode to utf-8
+The whole code is in Unicode, this is to reduce the size of the whole code.
+Let's evaluate the Unicode to utf-8
 
 ```js
 
@@ -35,7 +35,7 @@ for(i=h=540,O=q=>(Math.random()*2-1)*w;i--;x.clearRect(h+i%2*45,256+(i%4/2|0)*90
 
 ---
 
-Much better, now let's start analysing it
+Much better, now let's start analyzing it
 
 ```js
 for (
@@ -56,7 +56,7 @@ for (
 
 Rearranging things to make it look readable.  
 
-There are some JS tricks I ran into used to obsure the code
+There are some JS tricks I ran into used to obscure the code
 
 - `(w = 960) + O()` is simply `960 + O()` with w initialized
 - In the function `O=q=>(Math.random()*2-1)*w;` even though the param `q` is not used, we have a param as `q` is 1 char compared to `()` 2 chars
