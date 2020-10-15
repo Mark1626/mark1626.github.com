@@ -22,3 +22,7 @@ title: Books I've read in 2020
 15. [The Kreutzer Sonata - Leo Tolstoy](http://www.gutenberg.org/ebooks/689)
 16. [Candide - Voltaire](http://www.gutenberg.org/ebooks/19942)
 17. [The Myth of Sisyphus - Albert Camus](https://en.wikipedia.org/wiki/The_Myth_of_Sisyphus)
+18. [The Forerunner - Kahlil Gibran](https://standardebooks.org/ebooks/khalil-gibran/the-forerunner)
+19. [The Idiot - Fyodor Dostoevsky](https://en.wikipedia.org/wiki/The_Idiot)
+20. [Ulysses](http://www.gutenberg.org/ebooks/4300)
+
