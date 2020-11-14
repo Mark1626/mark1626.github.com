@@ -27,17 +27,17 @@ for(z=k=2e3;k--;x.fillRect(i*9+S(z*t)*z|0,j*9+t*420,t?9:z,9))i=k%9,j=k/9|0,x.fil
 
 ```js
 for (
-    z = k = 2e3;
-    k--;
-    x.fillRect((i * 9 + S(z * t) * z) | 0, j * 9 + t * 420, t ? 9 : z, 9)
-  )
-    (i = k % 9),
-      (j = (k / 9) | 0),
-      (x.fillStyle = R(
-        (q = t ? ((i * j) % 2) * 400 * S(k * k * t) : k / 3 + C(k * k) * 39),
-        q - 99,
-        t ? q - k : 99
-      ));
+  z = k = 2e3;
+  k--;
+  x.fillRect((i * 9 + S(z * t) * z) | 0, j * 9 + t * 420, t ? 9 : z, 9)
+)
+  (i = k % 9),
+    (j = (k / 9) | 0),
+    (x.fillStyle = R(
+      (q = t ? ((i * j) % 2) * 400 * S(k * k * t) : k / 3 + C(k * k) * 39),
+      q - 99,
+      t ? q - k : 99
+    ));
 ```
 
 ---
@@ -45,29 +45,31 @@ for (
 ### Step 2: Rearrange it
 
 ```js
-  const z = 2e3;
-  let q;
-  for (let k = 2e3; k--; ) {
-    const i = k % 9; // x-axis
-    const j = (k / 9) | 0; // y-axis
-    if (t) {
-      if ((i * j) % 2) {
-        q = 400 * S(k * k * t); // Lights in the building
-      } else {
-        q = 0; // Building or rather the black space surrounding the lights
-      }
+const z = 2e3;
+let q;
+for (let k = 2e3; k--; ) {
+  const i = k % 9; // x-axis
+  const j = (k / 9) | 0; // y-axis
+  if (t) {
+    if ((i * j) % 2) {
+      q = 400 * S(k * k * t); // Lights in the building
     } else {
-      q = k / 3 + C(k * k) * 39; // Sunset effect
+      q = 0; // Building or rather the black space surrounding the lights
     }
-
-    const rx = (i * 9 + S(z * t) * z) | 0;
-    const ry = j * 9 + t * 420;
-    const w = t ? 9 : z;
-    const h = 9;
-
-    x.fillRect(rx, ry, w, h);
-    x.fillStyle = R(q, q - 99, t ? q - k : 99);
+  } else {
+    q = k / 3 + C(k * k) * 39; // Sunset effect
   }
+
+ // Offsets building into the back, at later t
+  const rx = (i * 9 + S(z * t) * z) | 0;
+  const ry = j * 9 + t * 420;
+
+  const w = t ? 9 : z;
+  const h = 9;
+
+  x.fillRect(rx, ry, w, h);
+  x.fillStyle = R(q, q - 99, t ? q - k : 99);
+}
 ```
 
 #### Summary:
