@@ -17,6 +17,8 @@ Should be available in Jest 27
 
 If your project uses Babel or TS and you are using Jest it works out of the box to transform the files before running the tests. A common pattern is to use `globalSetup` and `globalTeardown` which do as their name suggests, other than these if you need more control there is the `testEnvironment` module which you can use to add hooks at a more fine grained level. However some of these modules don't support using Babel or TS and require you to write in CommonJS. These PRs are for adding transform support in a subset of modules
 
+This should make it easier for TS projects using these modules
+
 ```js
 // jest.config.js
 module.exports = {
