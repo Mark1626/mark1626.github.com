@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Reverse Engineering Code Art - Part 4"
+title: "Reverse Engineering Code Art - Part 4 - City Sunset"
 author: Nimalan
 tags: dev reverse-engineering
 ---
 
 [City Sunset v2](https://www.dwitter.net/d/17507) by [KilledByAPixel](https://www.dwitter.net/u/KilledByAPixel)
 
-You can [his blog](https://frankforce.com/dissecting-a-dweet-9-city-sunset/) on this dwitter on his site. I wanted to reverse engineer it myself before reading his blog, so here goes.
+You can read [his blog](https://frankforce.com/dissecting-a-dweet-9-city-sunset/) on this dwitter on his site. I wanted to reverse engineer it myself before reading his blog, so here goes.
 
 The code is quite simple compared to the previous ones I've posted, which is why why I really like this dwitter so much
 
