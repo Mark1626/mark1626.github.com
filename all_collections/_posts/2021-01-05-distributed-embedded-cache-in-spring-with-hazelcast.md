@@ -11,6 +11,8 @@ The whole source code can be found [here](https://github.com/Mark1626/Parapherna
 
 ![Spring Hazelcast](/assets/images/spring-hazelcast.svg)
 
+---
+
 ## Setting up a distributed in-memory hazelcast cluster
 
 We'll start by adding hazelcast to our dependency
@@ -28,6 +30,7 @@ Let's add an endpoint which takes long to respond. The service method below will
 `@Cachable` to cache the response of this method in our hazelcast cluster
 
 ```groovy
+
 @RestController
 class PingController {
 
@@ -109,6 +112,8 @@ Members {size:2, ver:4} [
 
 Values cached in Instance A will be available in instance B. We now have a basic cluster setup
 
+---
+
 ## Moving the setup to k8s
 
 In k8s we can't do a simple multicast to form the cluster. Hazelcast has member discovery [plugin](https://github.com/hazelcast/hazelcast-kubernetes) to make this easier.
@@ -139,6 +144,7 @@ hazelcast:
 We would need to create a `Service`. As per hazelcast's docs any service should would. For this example I'm creating a headless service
 
 ```yml
+# service.yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -185,6 +191,7 @@ We now have a hazelcast cluster with service discovery but note we are using the
 Create a separate service account for the pods which are running as hazelcast
 
 ```yaml
+# serviceaccount.yaml
 apiVersion: v1
 kind: ServiceAccount
 metadata:
@@ -195,6 +202,7 @@ metadata:
 We'll use this service account in the deployment.
 
 ```yaml
+# statefulset.yaml
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
@@ -215,6 +223,7 @@ spec:
 Now let's create a `Role` in the namespace which has `get`, and `list` access to the `pods` and `endpoints`. Next we'll bind the new role to the `ServiceAccount`
 
 ```yaml
+# rbac.yaml
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
