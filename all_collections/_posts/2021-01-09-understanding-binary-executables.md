@@ -10,6 +10,7 @@ This is my attempt at trying to reverse engineer and understand binaries with `h
 For this I'm going to use three `Hello World` binaries, one made from C, one from GO and one from Rust compiled in the `Mach Kernel` with a MacBook Pro
 
 ```c
+
 #include <stdio.h>
 
 int main(int argc, char** argv) {
@@ -19,6 +20,7 @@ int main(int argc, char** argv) {
 ```
 
 ```go
+
 package main
 
 import "fmt"
@@ -29,6 +31,7 @@ func main() {
 ```
 
 ```rs
+
 fn main() {
   println!("Hello World!");
 }
@@ -56,6 +59,7 @@ Every executable we create will be in the following layout
 #### Understanding the headers
 
 ```c
+
 struct mach_header_64 {
   uint32_t  magic;    /* mach magic number identifier */
   cpu_type_t  cputype;  /* cpu specifier */
@@ -73,6 +77,7 @@ struct mach_header_64 {
 - `filetype` represents the type of Mach-O(exec, dylib). As an example running `otool` on a dylib
 
 ```c
+
 ❯ otool -h libeuler.so
 Mach header
       magic cputype cpusubtype  caps    filetype ncmds sizeofcmds      flags
@@ -83,7 +88,8 @@ Mach header
 
 Let's read the headers with the help of `otool`  `otool -h main`
 
-```
+```c
+
 // C
 Mach header
       magic cputype cpusubtype  caps    filetype ncmds sizeofcmds      flags
@@ -105,6 +111,7 @@ Mach header
 > Go
 
 ```
+
 00000000  cf fa ed fe 07 00 00 01  03 00 00 00 02 00 00 00  |................|
 00000010  0b 00 00 00 d0 09 00 00  00 00 00 00 00 00 00 00  |................|
 00000020  19 00 00 00 48 00 00 00  5f 5f 50 41 47 45 5a 45  |....H...__PAGEZE|
@@ -119,6 +126,7 @@ Mach header
 > C
 
 ```
+
 00000000  cf fa ed fe 07 00 00 01  03 00 00 00 02 00 00 00  |................|
 00000010  10 00 00 00 58 05 00 00  85 00 20 00 00 00 00 00  |....X..... .....|
 00000020  19 00 00 00 48 00 00 00  5f 5f 50 41 47 45 5a 45  |....H...__PAGEZE|
@@ -133,6 +141,7 @@ Mach header
 > Rust
 
 ```
+
 00000000  cf fa ed fe 07 00 00 01  03 00 00 00 02 00 00 00  |................|
 00000010  11 00 00 00 10 08 00 00  85 00 a0 00 00 00 00 00  |................|
 00000020  19 00 00 00 48 00 00 00  5f 5f 50 41 47 45 5a 45  |....H...__PAGEZE|
@@ -144,13 +153,15 @@ Mach header
 00000080  00 00 00 00 01 00 00 00  00 40 02 00 00 00 00 00  |.........@......|
 ```
 
-The hex `cf fa ed fe 07 00 00 01  03 00 00 00 02 00 00 00 11 00 00 00 10 08 00 00  85` is part of the header
+The hex below is part of the header  
+`cf fa ed fe 07 00 00 01  03 00 00 00 02 00 00 00`  
+`11 00 00 00 10 08 00 00  85`  
 
-`cf fa ed fe` -  Magic Number
-`07 00 00 01` - CPU Type
-`03 00` - Cpusubtype
-`00 00` - caps
-`02 00` - filetype
+`cf fa ed fe` -  Magic Number  
+`07 00 00 01` - CPU Type  
+`03 00` - Cpusubtype  
+`00 00` - caps  
+`02 00` - filetype  
 `11 00` - ncmd
 
 > **Note:** I tried to read the header from the binary manually, there could be some errors in the above. If you want to understand the structure I suggest hexdump the header into the struct
@@ -170,6 +181,7 @@ interesting sections here
 - `__DATA` segment contains variables
 
 ```
+
 Load command 0
       cmd LC_SEGMENT_64
   cmdsize 72
@@ -223,6 +235,7 @@ compatibility version 1.0.0
 
 
 ```
+
 > otool -L main
 // C
 main:
@@ -245,6 +258,7 @@ main:
 > Go
 
 ```
+
 00000990  00 00 00 00 00 00 00 00  0e 00 00 00 20 00 00 00  |............ ...|
 000009a0  0c 00 00 00 2f 75 73 72  2f 6c 69 62 2f 64 79 6c  |..../usr/lib/dyl|
 000009b0  64 00 00 00 00 00 00 00  0c 00 00 00 38 00 00 00  |d...........8...|
@@ -258,6 +272,7 @@ main:
 > C
 
 ```
+
 0000490  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
 000004a0  0e 00 00 00 20 00 00 00  0c 00 00 00 2f 75 73 72  |.... ......./usr|
 000004b0  2f 6c 69 62 2f 64 79 6c  64 00 00 00 00 00 00 00  |/lib/dyld.......|
@@ -276,6 +291,7 @@ main:
 > Rust
 
 ```
+
 00000710  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
 00000720  0e 00 00 00 20 00 00 00  0c 00 00 00 2f 75 73 72  |.... ......./usr|
 00000730  2f 6c 69 62 2f 64 79 6c  64 00 00 00 00 00 00 00  |/lib/dyld.......|
@@ -311,12 +327,14 @@ I'll go over each binary separately in detail later, but for now some highlights
 This one is straight forward, found the `Hello World` string within the binary
 
 ```
+
 00000fa0  ff ff 48 65 6c 6c 6f 20  57 6f 72 6c 64 00 00 00  |..Hello World...|
 ```
 
 Found a reference to the `main` and the `printf`
 
 ```
+
 00003000  11 23 00 51 00 00 00 00  11 40 64 79 6c 64 5f 73  |.#.Q.....@dyld_s|
 00003010  74 75 62 5f 62 69 6e 64  65 72 00 51 72 00 90 00  |tub_binder.Qr...|
 00003020  73 00 11 40 5f 70 72 69  6e 74 66 00 90 00 00 00  |s..@_printf.....|
@@ -330,6 +348,7 @@ Found a reference to the `main` and the `printf`
 Go has a build ID in the binary
 
 ```
+
 00001000  ff 20 47 6f 20 62 75 69  6c 64 20 49 44 3a 20 22  |. Go build ID: "|
 00001010  67 68 73 2d 76 57 69 35  5f 34 6f 39 54 6a 4f 4e  |ghs-vWi5_4o9TjON|
 00001020  77 30 62 66 2f 79 43 36  61 51 6a 67 62 31 35 6e  |w0bf/yC6aQjgb15n|
@@ -343,6 +362,7 @@ The binary seems to have some references to which file was used to create it, an
 (in this case fmt).
 
 ```
+
 ...
 00163670  68 65 6c 6c 6f 2d 77 6f  72 6c 64 2d 67 6f 2f 6d  |hello-world-go/m|
 00163680  61 69 6e 2e 67 6f 00 2f  55 73 65 72 73 2f 6e 69  |ain.go./Users/ni|
@@ -355,6 +375,7 @@ The binary seems to have some references to which file was used to create it, an
 And the `Hello World` string, interestingly there doesn't seem to be any bytes separating the near-by strings
 
 ```
+
 000cd870  54 52 41 43 45 42 41 43  4b 48 65 6c 6c 6f 20 57  |TRACEBACKHello W|
 000cd880  6f 72 6c 64 49 64 65 6f  67 72 61 70 68 69 63 4d  |orldIdeographicM|
 ```
@@ -364,12 +385,14 @@ And the `Hello World` string, interestingly there doesn't seem to be any bytes s
 I expect this should be straight forward like the see binary, and yes I found the `Hello World!`
 
 ```
+
 00020a60  48 65 6c 6c 6f 20 57 6f  72 6c 64 21 0a 00 00 00  |Hello World!....|
 ```
 
 This area of the Virtual memory also seems to be the place other strings are present, so I found a couple of error message strings
 
 ```
+
 00020aa0  61 6c 72 65 61 64 79 20  62 6f 72 72 6f 77 65 64  |already borrowed|
 00020ab0  63 6f 6e 6e 65 63 74 69  6f 6e 20 72 65 73 65 74  |connection reset|
 00020ac0  65 6e 74 69 74 79 20 6e  6f 74 20 66 6f 75 6e 64  |entity not found|
