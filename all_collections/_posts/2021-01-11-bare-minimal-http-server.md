@@ -10,14 +10,18 @@ tags: dev network server
 Some time back I noticed that you can't run a Spring Boot starter with Hibernate in a container with 200M memory.
 
 [StackOverflow on this](https://stackoverflow.com/questions/44491257/how-to-reduce-spring-boot-memory-usage)  
-`The bare minimum you'll get away with is around 72M total memory on the simplest of Spring Boot applications with a single controller and embedded Tomcat`
+```
+
+The bare minimum you'll get away with is around 72M total memory on the simplest of  
+Spring Boot applications with a single controller and embedded Tomcat
+
+```
 
 Now this just for including the JARs, throw in a couple of endpoints and entities and now your infra is struggling to keep 5 microservices running and you still have a pathetic response time
 
 ## Ok, so what?
 
-I run a server in my Raspberry Pi which serves files and some endpoints.
-So now the problem statement is `What's the bare minimum http usable server?`.
+I run a server in my Raspberry Pi which serves files and some endpoints. So now the problem statement is *What's the bare minimum http usable server?*.
 
 #### Requirements
 
@@ -48,9 +52,7 @@ localhost {
 }
 ```
 
-This was my first attempt, I had several different services, I used Caddy as a reverse proxy, a 
-file server. Better than Spring Boot, easier to set up `https` and I just like 
-`Caddy`, but it's still no where near my target, and unfortunately the temperature on my Pi was also not very good
+This was my first attempt, I had several different services, I used Caddy as a reverse proxy, a file server. Better than Spring Boot, easier to set up `https` and I just like `Caddy`, but it's still no where near my target, and unfortunately the temperature on my Pi was also not very good
 
 ![Pi Arch Temperature](/assets/images/pi_caddy_temp.png)
 
@@ -84,7 +86,8 @@ I could write it in C, but that would learning a framework or library in C which
 A couple of months ago I noticed that the Apache Http Server has a program called [httpd](https://httpd.apache.org/docs/2.4/programs/httpd.html). This is from the documentation
 
 ```
-httpd is the Apache HyperText Transfer Protocol (HTTP) server program. It is designed to be run as a standalone daemon process. When used like this it will create a pool of child processes or threads to handle requests.
+httpd is the Apache HyperText Transfer Protocol (HTTP) server program. It is designed to be run as a standalone daemon process.  
+When used like this it will create a pool of child processes or threads to handle requests.
 
 In general, httpd should not be invoked directly, but rather should be invoked via apachectl
 ```
