@@ -9,14 +9,14 @@ tags: dev network server
 
 Some time back I noticed that you can't run a Spring Boot starter with Hibernate in a container with 200M memory.
 
-[StackOverflow on this](https://stackoverflow.com/questions/44491257/how-to-reduce-spring-boot-memory-usage):
+[StackOverflow on this](https://stackoverflow.com/questions/44491257/how-to-reduce-spring-boot-memory-usage)  
 `The bare minimum you'll get away with is around 72M total memory on the simplest of Spring Boot applications with a single controller and embedded Tomcat`
 
 Now this just for including the JARs, throw in a couple of endpoints and entities and now your infra is struggling to keep 5 microservices running and you still have a pathetic response time
 
 ## Ok, so what?
 
-I run a server in my Raspberry Pi which serves files and some endpoints so let's start.
+I run a server in my Raspberry Pi which serves files and some endpoints.
 So now the problem statement is `What's the bare minimum http usable server?`.
 
 #### Requirements
