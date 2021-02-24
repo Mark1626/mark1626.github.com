@@ -7,7 +7,7 @@ pagination:
 <ul class="post-list">
 {% for post in paginator.posts %}
   <li>
-    <span class="post-meta">{{ post.date }}</span>
+    <span class="post-meta">{{ post.date | date: "%b %d, %y" }}</span>
     <h1><a class="post-link" href="{{ post.url }}">{{ post.title }}</a></h1>
     <div class="content">
       {{ post.excerpt }}
