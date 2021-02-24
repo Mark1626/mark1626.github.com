@@ -43,7 +43,7 @@ List of tidbits I learn
 
 ## Avatar Generator
 
-- Procedural png generator, which can then be resized and used as icons and favicons
+- Vanilla JS Procedural png generator, which can then be resized and used as icons and favicons
 
 [Source](https://github.com/Mark1626/avatar-generator)
 [Live At](https://avatar-generator-six.now.sh/)
