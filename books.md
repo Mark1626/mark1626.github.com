@@ -1,7 +1,7 @@
 ---
 layout: page
-permalink: /blog
-permalink_name: /blog
+permalink: /books
+permalink_name: /books
 title: Blog Posts
 ---
 
