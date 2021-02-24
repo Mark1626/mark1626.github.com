@@ -3,6 +3,7 @@ layout: post
 title: "Law of Demeter"
 author: Nimalan
 tags: java design
+excerpt_separator: <!--more-->
 ---
 
 # Law of Demeter
@@ -14,6 +15,8 @@ about the topic, fix my code and sleep
 - Each unit should have only limited knowledge about other units: only units "closely" related to the current unit.
 - Each unit should only talk to its friends; don't talk to strangers.
 - Only talk to your immediate friend
+
+<!--more-->
 
 In simple terms
 > LoD tells us that it is a bad idea for single functions to know the entire navigation structure of the system.

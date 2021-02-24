@@ -3,6 +3,7 @@ layout: post
 title: "Reverse Engineering Code Art - Part 3"
 author: Nimalan
 tags: dev reverse-engineering
+excerpt_separator: <!--more-->
 ---
 
 [Original Dwitter](https://www.dwitter.net/d/7423) by [Author](https://www.dwitter.net/u/jylikangas)
@@ -16,6 +17,8 @@ for(c.width=i=608;i--;)i%320<64&&i&2||i>447&i%32<6|i>576&i%2||x.fillRect(304+S(A
 
 
 ```
+
+<!--more-->
 
 ---
 

@@ -3,13 +3,14 @@ layout: post
 title: "Covariance and Contravariance"
 author: Nimalan
 tags: java language
+excerpt_separator: <!--more-->
 ---
 
 # Covariance and Contravariance
 
 ### Design Guideline 2 - Covariant and Contravariance
 
-<!-- truncate -->
+<!--more-->
 
 ### Variance
 

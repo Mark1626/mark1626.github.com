@@ -5,13 +5,10 @@ pagination:
 ---
 
 {% for post in paginator.posts %}
-  <a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
+  <span class="post-meta">{{ post.date }}</span>
   <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-  <p class="author">
-    <span class="date">{{ post.date }}</span>
-  </p>
   <div class="content">
-    {{ post.content }}
+    {{ post.excerpt }}
   </div>
 {%endfor%}
 

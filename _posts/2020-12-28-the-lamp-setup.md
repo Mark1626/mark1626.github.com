@@ -3,11 +3,14 @@ layout: post
 title: "The lamp setup"
 author: Nimalan
 tags: dev redis nodemcu
+excerpt_separator: <!--more-->
 ---
 
 You can see the [full source](https://github.com/Mark1626/Paraphernalia/tree/master/the-lamp) here
 
 ![The Lamp](/assets/images/the-lamp.jpg)
+
+<!--more-->
 
 ---
 

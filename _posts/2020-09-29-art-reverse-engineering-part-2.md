@@ -3,6 +3,7 @@ layout: post
 title: "Reverse Engineering Code Art - Part 2"
 author: Nimalan
 tags: dev reverse-engineering
+excerpt_separator: <!--more-->
 ---
 Analyzing `The eye of the storm`
 
@@ -19,6 +20,8 @@ eval(unescape(escape`𩡯𬠨𪐽𪀽𝐴𜀬𣰽𬐽🠨𣑡𭁨𛡲𨑮𩁯�
 
 
 ```
+
+<!--more-->
 
 ---
 

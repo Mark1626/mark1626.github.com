@@ -3,6 +3,7 @@ layout: post
 title: "Reverse Engineering binary executables - Part 1"
 author: Nimalan
 tags: dev reverse-engineering c go rust
+excerpt_separator: <!--more-->
 ---
 
 This is my attempt at trying to reverse engineer and understand binaries with `hexdump`, `otool` and try to understand how things works
@@ -38,6 +39,8 @@ fn main() {
 ```
 
 I'm going in blind with this, let's see what we find.
+
+<!--more-->
 
 ---
 

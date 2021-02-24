@@ -3,6 +3,7 @@ layout: post
 title: "Reverse Engineering Code Art - Part 4 - City Sunset"
 author: Nimalan
 tags: dev reverse-engineering
+excerpt_separator: <!--more-->
 ---
 
 [City Sunset v2](https://www.dwitter.net/d/17507) by [KilledByAPixel](https://www.dwitter.net/u/KilledByAPixel)
@@ -20,6 +21,8 @@ for(z=k=2e3;k--;x.fillRect(i*9+S(z*t)*z|0,j*9+t*420,t?9:z,9))i=k%9,j=k/9|0,x.fil
 ```
 
 ![City Sunset](/assets/images/city_sunset.png)
+
+<!--more-->
 
 ---
 

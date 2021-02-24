@@ -3,6 +3,7 @@ layout: post
 title: "A bare minimal http server"
 author: Nimalan
 tags: dev network server
+excerpt_separator: <!--more-->
 ---
 
 ## Now how did we get here?
@@ -22,6 +23,8 @@ Now this just for including the JARs, throw in a couple of endpoints and entitie
 ## Ok, so what?
 
 I run a server in my Raspberry Pi which serves files and some endpoints. So now the problem statement is *What's the bare minimum http usable server?*.
+
+<!--more-->
 
 #### Requirements
 

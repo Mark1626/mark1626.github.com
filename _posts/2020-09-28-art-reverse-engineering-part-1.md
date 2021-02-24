@@ -3,6 +3,7 @@ layout: post
 title: "Reverse Engineering Code Art - Part 1"
 author: Nimalan
 tags: dev reverse-engineering
+excerpt_separator: <!--more-->
 ---
 
 [Original Dwitter](https://www.dwitter.net/d/3078) by [FireFly](https://www.dwitter.net/u/FireFly)
@@ -20,6 +21,8 @@ for(i=2e3;!t&&i--;Math.random()>(X**2+(Y-4)**2)**.5/6&&f(7)+f(-7))X=i&3,Y=i>>2&7
 
 
 ```
+
+<!--more-->
 
 ---
 

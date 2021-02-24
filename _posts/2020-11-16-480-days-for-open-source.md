@@ -3,6 +3,7 @@ layout: post
 title: "480 days for open source"
 author: Nimalan
 tags: dev open-source
+excerpt_separator: <!--more-->
 ---
 
 450+ days and 2 major releases, and several smaller PRs to support the feature later it merged into master
@@ -12,6 +13,8 @@ Should be available in Jest 27
 - [Transform jest environment](https://github.com/facebook/jest/pull/8751)
 - [Transform jest test-runner](https://github.com/facebook/jest/pull/8823)
 - [Transform jest runner](https://github.com/facebook/jest/pull/8854)
+
+<!--more-->
 
 ### What is this feature:
 

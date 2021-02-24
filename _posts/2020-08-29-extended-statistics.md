@@ -3,6 +3,7 @@ layout: post
 title: "Case study on extended statistics"
 author: Nimalan
 tags: postgres performance
+excerpt_separator: <!--more-->
 ---
 
 # Case study on extended statistics
@@ -18,6 +19,8 @@ First we need to ask ourselves the following questions
 - What is an extended statistics?
   + An extended statistics is something an user can create
   + This is used in cases when queries are slow due to correlation between columns
+
+<!--more-->
 
 ---
 

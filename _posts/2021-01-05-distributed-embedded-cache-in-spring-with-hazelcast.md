@@ -3,6 +3,7 @@ layout: post
 title: "Setting up a distributed in-memory cache in Spring with Hazelcast"
 author: Nimalan
 tags: dev spring hazelcast k8s
+excerpt_separator: <!--more-->
 ---
 
 The whole source code can be found [here](https://github.com/Mark1626/Paraphernalia/tree/master/spring-hazelcast)
@@ -10,6 +11,8 @@ The whole source code can be found [here](https://github.com/Mark1626/Parapherna
 ## Architecture
 
 ![Spring Hazelcast](/assets/images/spring-hazelcast.svg)
+
+<!--more-->
 
 ---
 

@@ -13,8 +13,3 @@ Hello and welcome to my site
 - [Projects](/projects)
 - [About](/about)
 - [Books I'm reading](/books)
-
-### Other links
-
-- [Atom Feed](/feed.xml)
-- [SiteMap](/sitemap.xml)

@@ -21,6 +21,7 @@ header_pages:
   - projects.md
 
 minima:
+  date_format: "%b %-d, %Y"
   social_links:
     github: mark1626
     keybase: mark854
