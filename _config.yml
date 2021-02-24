@@ -1,7 +1,7 @@
 title: Mark1626 Home Page
 markdown: kramdown
 url: "https://mark1626.github.io"
-baseurl: "/"
+baseurl: "/blog"
 
 # for atom feed
 author: Nimalan aka Mark1626
@@ -17,7 +17,6 @@ plugins:
 
 header_pages:
   - about.md
-  - blog.md
   - books.md
   - projects.md
 
@@ -33,6 +32,9 @@ pagination:
   title: ':title - page :num'
   sort_field: 'date'
   category: 'posts'
+
+paginate: 5
+paginate_path: "/blog/page:num/"
 
 defaults:
   - scope:
