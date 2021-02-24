@@ -26,6 +26,11 @@ header_pages:
   - books.md
   - projects.md
 
+minima:
+  social_links:
+    github: mark1626
+    keybase: mark854
+
 paginate_path: "/page:num/"
 
 paginate: 5
