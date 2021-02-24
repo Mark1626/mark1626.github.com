@@ -33,4 +33,4 @@ You can see the [full source](https://github.com/Mark1626/Paraphernalia/tree/mas
 
 ### Architecture
 
-![Lamp Architecture](/assets/images /redis-lamp.png)
+![Lamp Architecture](/assets/images/redis-lamp.png)
