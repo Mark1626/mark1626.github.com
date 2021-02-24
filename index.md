@@ -9,7 +9,9 @@ Hello and welcome to my site
 
 ### Where to start
 
-- [Blog](/blog)
-- [Projects](/projects)
 - [About](/about)
+- [Blog](/blog)
+- [Micro Blog](/micro-blog/twtxt.txt)
+- [Projects](/projects)
+- ["Knowledge" Document Everything](/knowledge)
 - [Books I'm reading](/books)
