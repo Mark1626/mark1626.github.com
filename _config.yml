@@ -8,6 +8,8 @@ author:
   name: Nimalan aka Mark1626
   email: nimalan.dev@protonmail.com
 
+theme: minima
+
 plugins:
   - jekyll-paginate
   - jemoji
