@@ -34,13 +34,6 @@ pagination:
   sort_field: 'date'
   category: 'posts'
 
-collections_dir: all_collections
-collections:
-  posts:
-    output: true
-  projects:
-    output: true
-
 defaults:
   - scope:
       path: ""
