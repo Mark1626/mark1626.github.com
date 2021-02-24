@@ -25,4 +25,4 @@ title: Books I've read in 2020
 18. [The Forerunner - Kahlil Gibran](https://standardebooks.org/ebooks/khalil-gibran/the-forerunner)
 19. [The Idiot - Fyodor Dostoevsky](https://en.wikipedia.org/wiki/The_Idiot)
 20. [Ulysses](http://www.gutenberg.org/ebooks/4300)
-
+21. [Dead Souls](https://standardebooks.org/ebooks/nikolai-gogol/dead-souls/d-j-hogarth)
