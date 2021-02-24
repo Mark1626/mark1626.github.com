@@ -2,7 +2,7 @@
 layout: page
 permalink: /blog
 permalink_name: /blog
-title: Blog Posts
+title: Blog
 ---
 
 # All Posts

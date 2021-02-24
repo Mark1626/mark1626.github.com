@@ -2,7 +2,7 @@
 layout: page
 permalink: /books
 permalink_name: /books
-title: Blog Posts
+title: Books
 ---
 
 # Current Year
