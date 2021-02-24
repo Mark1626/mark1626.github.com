@@ -6,10 +6,6 @@ baseurl: "/"
 # for atom feed
 author: Nimalan aka Mark1626
 
-site:
-  author:
-    name: Nimalan aka Mark1626
-
 theme: minima
 
 plugins:
