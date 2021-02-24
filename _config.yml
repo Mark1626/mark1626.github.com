@@ -6,7 +6,10 @@ baseurl: "/"
 # for atom feed
 author:
   name: Nimalan aka Mark1626
-  email: nimalan.dev@protonmail.com
+
+site:
+  author:
+    name: Nimalan aka Mark1626
 
 theme: minima
 
@@ -16,6 +19,12 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-feed
+
+header_pages:
+  - about.md
+  - blog.md
+  - books.md
+  - projects.md
 
 paginate_path: "/page:num/"
 
