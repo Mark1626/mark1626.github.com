@@ -41,6 +41,14 @@ List of tidbits I learn
 
 ---
 
+### Paraphernalia
+
+A collection of all the spikes I do
+
+[Source](https://github.com/Mark1626/Paraphernalia)
+
+---
+
 ## Avatar Generator
 
 - Vanilla JS Procedural png generator, which can then be resized and used as icons and favicons
