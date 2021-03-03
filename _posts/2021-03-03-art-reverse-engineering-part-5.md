@@ -8,7 +8,7 @@ excerpt_separator: <!--more-->
 
 This [dwitter](https://www.dwitter.net/d/21570) by [cantelope](https://www.dwitter.net/u/cantelope)
 
-I absolutely love this one visually. And also that it's a tessellation with [stellation](https://en.wikipedia.org/wiki/Stellation) The math behind it is awesome and I had to revisit it to write this. This sort of tessellation is called the [Rhombille tiling](https://en.wikipedia.org/wiki/Rhombille_tiling)
+I absolutely love this one visually. It is based on the tessellation [Rhombille tiling](https://en.wikipedia.org/wiki/Rhombille_tiling) with [stellations](https://en.wikipedia.org/wiki/Stellation) The math behind it is awesome and I had to revisit it to write this.
 
 ```js
 
@@ -99,7 +99,7 @@ Now to understand how the Rhombille tiling is done
 
 The values `X = (i % f) * 0.9 + (b % 2) * 0.44 - 8;` and `Y = ((b - 4) * 3) / 4;` represent the center of the point from which do draw. These two are constant
 
-There is a neat little trick here
+There is a neat little trick here to get 2 PI
 
 ```js
 // 6 / 0.95 = 2 * Math.PI
@@ -117,7 +117,7 @@ When two stars intersect, a rhombi is created with two 60 deg and 120 deg angles
 
 ![Code Art 5-6](/assets/images/code_art_5_6.png)
 
-Iterating through this will create the Rhombille tiling tessellation
+Repeating the process will create the Rhombille tiling tessellation
 
 ### Step 3: Understanding the usage of time
 
