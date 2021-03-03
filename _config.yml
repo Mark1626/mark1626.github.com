@@ -17,7 +17,6 @@ plugins:
 
 header_pages:
   - about.md
-  - books.md
   - projects.md
 
 minima:
