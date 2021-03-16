@@ -6,3 +6,7 @@ tmp/
 npm-debug.log*
 .DS_Store
 .cache
+
+_site
+gem
+.jekyll-cache
