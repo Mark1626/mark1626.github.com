@@ -19,3 +19,10 @@ the time for it
 
 - [Books in 2020](/books/2020)
 - [Books in 2019](/books/2019)
+
+## Acknowledgement
+
+Acknowledgement to various tools used
+
+- [Tutorial Markdown](https://github.com/tholman/tutorial-markdown)
+- [Monaco](https://github.com/Microsoft/vscode/blob/master/LICENSE.txt)
