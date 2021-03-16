@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+  {%- include head.html -%} {%- include tutorial-additional-head.html -%}
+
+  <body>
+    {%- include header.html -%}
+
+    <div class="page-content">
+      <div class="wrapper">
+        <header class="post-header">
+          <h1 class="post-title p-name" itemprop="name headline">
+            {{ page.title | escape }}
+          </h1>
+          <p class="post-meta">
+            {%- assign date_format = site.minima.date_format | default: "%b %-d,
+            %Y" -%}
+            <time
+              class="dt-published"
+              datetime="{{ page.date | date_to_xmlschema }}"
+              itemprop="datePublished"
+            >
+              {{ page.date | date: date_format }}
+            </time>
+            {%- if page.modified_date -%} ~ {%- assign mdate =
+            page.modified_date | date_to_xmlschema -%}
+            <time
+              class="dt-modified"
+              datetime="{{ mdate }}"
+              itemprop="dateModified"
+            >
+              {{ mdate | date: date_format }}
+            </time>
+            {%- endif -%} {%- if page.author -%} • {% for author in page.author
+            %}
+            <span
+              itemprop="author"
+              itemscope
+              itemtype="http://schema.org/Person"
+            >
+              <span class="p-author h-card" itemprop="name"
+                >{{ author }}</span
+              ></span
+            >
+            {%- if forloop.last == false %}, {% endif -%} {% endfor %} {%- endif
+            -%}
+          </p>
+        </header>
+
+        <div class="tutorial-post">
+          <div aria-label="Content">
+            <div class="sidebar tutorial-sidebar">
+              <div id="tutorial-code" class="tutorial-code"></div>
+
+              <div class="tutorial-send-code">
+                <span>➵</span>
+              </div>
+
+              <iframe
+                class="tutorial-frame"
+                src="/assets/utils/injectable-iframe.html"
+                sandbox="allow-same-origin allow-scripts"
+              ></iframe>
+            </div>
+          </div>
+
+          <div class="tutorial-content">{{ content }}</div>
+        </div>
+      </div>
+
+      <script src="/assets/js/libs/tutorial-markdown/tmd.js"></script>
+      <script src="/assets/js/libs/monaco-editor/min/vs/loader.js"></script>
+
+      <script>
+        require.config({
+          paths: { vs: "/assets/js/libs/monaco-editor/min/vs" },
+        });
+        var tmd, editor;
+
+        require(["vs/editor/editor.main"], function () {
+          editor = monaco.editor.create(
+            document.querySelector("#tutorial-code"),
+            {
+              value: [
+                "// Welcome to Tutorial Markdown.",
+                "// start scrolling, and we'll",
+                "// write the code.",
+              ].join("\n"),
+              lineNumbersMinChars: 2,
+              scrollBeyondLastLine: false,
+              language: "javascript",
+              fontSize: 10,
+              minimap: { enabled: false },
+              hover: false,
+              occurrencesHighlight: false,
+            }
+          );
+
+          editor.getModel().updateOptions({ tabSize: 2 });
+
+          tmd = new TutorialMarkdown({
+            editor: {
+              editor: editor,
+              api: monaco,
+            },
+            iframe: document.querySelector(".tutorial-frame"),
+            markdownSelector: {
+              blockSelector: ".tmd-trigger", // Selector for code blocks in the tutorial
+              codeSelector: ".language-js .code", // Selector for the code WITHIN the block
+            },
+          });
+        });
+
+        document
+          .querySelector(".tutorial-send-code")
+          .addEventListener("click", function () {
+            tmd.sendCode();
+          });
+      </script>
+    </div>
+    {%- include footer.html -%}
+  </body>
+</html>

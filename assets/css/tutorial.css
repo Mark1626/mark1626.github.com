@@ -1,0 +1,105 @@
+
+/* Override for space */
+.wrapper {
+  max-width: -webkit-calc(1000px - (30px * 2));
+  max-width: calc(1000px - (30px * 2));
+}
+
+/**
+ * Tutorials
+ */
+
+.tutorial-page {
+  flex-direction: row;
+}
+
+ .tutorial-post {
+  justify-content: center;
+  display: flex;
+}
+
+.tutorial-sidebar {
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.tutorial-content {
+  padding: 20px;
+  padding-bottom: 50vh;
+  width: 560px;
+  color: #222;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.tutorial-content h1 {
+  font-size: 28px;
+}
+
+.tutorial-content img {
+  background: #f9f9f9;
+  display: block;
+  margin-bottom: 20px;
+  max-width: 320px;
+  width: 100%;
+}
+
+.tutorial-content p {
+  margin-bottom: 20px;
+  line-height: 22px;
+  font-size: 15px;
+}
+
+.tutorial-content li {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.tutorial-content p code {
+  background-color: #eee;
+}
+
+.tutorial-contributor {
+  background: #eee;
+  padding: 30px;
+}
+
+.tutorial-code {
+  width: 320px;
+  height: 280px;
+}
+
+.tutorial-send-code {
+  width: 30px;
+  height: 30px;
+  font-size: 25px;
+  transform: scaleX(-1);
+  margin-right: -35px;
+  cursor: pointer;
+}
+
+.tutorial-frame {
+  border-top: 20px solid;
+  background: #f9f9f9;
+  height: 320px;
+  width: 320px;
+  border: 0px;
+}
+
+.sidebar {
+  flex-direction: column;
+  padding-right: 30px;
+  position: sticky;
+  height: 100vh;
+  display: flex;
+  width: 350px;
+  top: 0px;
+}
+
+table td {
+  border: none;
+}
+
+table {
+  border: none;
+}
