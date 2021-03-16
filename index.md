@@ -14,4 +14,3 @@ Hello and welcome to my site
 - [Micro Blog](/micro-blog/twtxt.txt)
 - [Projects](/projects)
 - ["Knowledge" Document Everything](/knowledge)
-- [Books I'm reading](/books)
