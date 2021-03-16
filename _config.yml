@@ -9,7 +9,7 @@ author: Nimalan aka Mark1626
 theme: minima
 
 plugins:
-  - jekyll-paginate-v2
+  - jekyll-paginate
   - jemoji
   - jekyll-seo-tag
   - jekyll-sitemap
@@ -25,14 +25,8 @@ minima:
     github: mark1626
     keybase: mark854
 
-pagination:
-  enabled: true
-  collection: 'posts'
-  per_page: 5
-  title: ':title - page :num'
-  sort_field: 'date'
-  sort_reverse: true
-  category: 'posts'
+paginate: 5
+paginate_path: "/blog/page:num/"
 
 defaults:
   - scope:
