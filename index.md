@@ -20,12 +20,13 @@ Hello and welcome to my site
 
 ## What am I reading?
 
-Currently reading [The Odyssey](https://standardebooks.org/ebooks/homer/the-odyssey/william-cullen-bryant)
+Currently reading [The Prince](https://standardebooks.org/ebooks/niccolo-machiavelli/the-prince/w-k-marriott)
 
 #### What have I read so far this year?
 
 - [Don Quixote](https://standardebooks.org/ebooks/miguel-de-cervantes-saavedra/don-quixote/john-ormsby)
 - [the Iliad](https://standardebooks.org/ebooks/homer/the-iliad/william-cullen-bryant)
+[The Odyssey](https://standardebooks.org/ebooks/homer/the-odyssey/william-cullen-bryant)
 
 #### Previous Years
 
