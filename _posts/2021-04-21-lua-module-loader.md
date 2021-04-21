@@ -62,6 +62,7 @@ table.insert(package.loaders, 2, custom_loader)
 ```
 
 > **Note:** This will work on all the future require after importing this module
+> **Note:** In Lua 5.3 this is called [package searchers](http://www.lua.org/manual/5.3/manual.html#pdf-package.searchers)
 
 ## Transformation Use Case
 
