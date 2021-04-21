@@ -73,7 +73,7 @@ local greet = fn(name)
 end
 ```
 
-This is the transform function I use to achieve this. `fn(` is converted into `function(`
+This is the transform function I use to achieve this uses a simple string replace. `fn(` is converted into `function(`
 
 ```lua
 -- This will transform some patterns in our file
@@ -101,4 +101,4 @@ end
 ## See Also
 
 - First saw this pattern in usage [here](https://github.com/4v0v/k1n3m4t1ks/blob/master/monkey.lua), kudos to the author [4v0v](https://github.com/4v0v)
-- [Example](https://github.com/Mark1626/Paraphernalia/tree/master/lerna-react/lua-package-loader)
+- [Example](https://github.com/Mark1626/Paraphernalia/tree/master/lua-package-loader)
