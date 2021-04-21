@@ -25,8 +25,8 @@ Currently reading [The Prince](https://standardebooks.org/ebooks/niccolo-machiav
 #### What have I read so far this year?
 
 - [Don Quixote](https://standardebooks.org/ebooks/miguel-de-cervantes-saavedra/don-quixote/john-ormsby)
-- [the Iliad](https://standardebooks.org/ebooks/homer/the-iliad/william-cullen-bryant)
-[The Odyssey](https://standardebooks.org/ebooks/homer/the-odyssey/william-cullen-bryant)
+- [The Iliad](https://standardebooks.org/ebooks/homer/the-iliad/william-cullen-bryant)
+- [The Odyssey](https://standardebooks.org/ebooks/homer/the-odyssey/william-cullen-bryant)
 
 #### Previous Years
 
