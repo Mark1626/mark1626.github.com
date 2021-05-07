@@ -2,7 +2,7 @@
 layout: post
 title: "Lua Module Loader"
 author: Nimalan
-tags: dev css frontend
+tags: dev lua loader
 excerpt_separator: <!--more-->
 ---
 
