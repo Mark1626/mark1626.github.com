@@ -20,10 +20,11 @@ Hello and welcome to my site
 
 ## What am I reading?
 
-Currently reading [The Prince](https://standardebooks.org/ebooks/niccolo-machiavelli/the-prince/w-k-marriott)
+Currently reading [Nicomachean Ethics by Aristotle](https://standardebooks.org/ebooks/aristotle/nicomachean-ethics/f-h-peters)
 
 #### What have I read so far this year?
 
+- [The Prince](https://standardebooks.org/ebooks/niccolo-machiavelli/the-prince/w-k-marriott)
 - [Don Quixote](https://standardebooks.org/ebooks/miguel-de-cervantes-saavedra/don-quixote/john-ormsby)
 - [The Iliad](https://standardebooks.org/ebooks/homer/the-iliad/william-cullen-bryant)
 - [The Odyssey](https://standardebooks.org/ebooks/homer/the-odyssey/william-cullen-bryant)
