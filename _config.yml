@@ -4,7 +4,10 @@ url: "https://mark1626.github.io"
 baseurl: "/"
 
 # for atom feed
-author: Nimalan aka Mark1626
+author:
+  name: Nimalan aka Mark1626
+
+show_excerpts: false
 
 theme: minima
 
@@ -24,6 +27,7 @@ minima:
   social_links:
     github: mark1626
     keybase: mark854
+    codepen: mark854
 
 paginate: 5
 paginate_path: "/blog/page:num/"
@@ -39,4 +43,4 @@ defaults:
       layout: "post"
       permalink: /posts/:categories/:year/:month/:day/:title/
 
-exclude: ["sitemap.xml", "feed.xml", "content.js", "README.md", "Gemfile", "Gemfile.lock"]
+exclude: ["README.md", "Gemfile", "Gemfile.lock"]
