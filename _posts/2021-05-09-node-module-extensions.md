@@ -13,6 +13,7 @@ Wait a minute is there any practical use case other than a syntax hack?
 Well then how about we build a loader so nodejs can read yaml
 
 ```js
+require("./loader")
 const config = require("config.yaml")
 const port = config.port || 3000;
 const http = require('http');
@@ -26,7 +27,9 @@ const server = http.createServer(requestListener);
 server.listen(config.port);
 ```
 
-This looks way more practical so let's begin
+This looks way more practical so let's begin.
+
+TLDR; Leaving a link to the [source code](https://github.com/Mark1626/Paraphernalia/tree/master/node-module-extensions) I made for this example
 
 <!--more-->
 
@@ -247,4 +250,5 @@ JS files will have to be compiled for them to work, since a new compile function
 
 ## See Also
 
+- [Source Code of the examples](https://github.com/Mark1626/Paraphernalia/tree/master/node-module-extensions)
 - [Pirates - require hijack](https://github.com/ariporad/pirates)
