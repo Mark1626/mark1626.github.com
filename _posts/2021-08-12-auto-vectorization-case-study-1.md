@@ -42,14 +42,14 @@ They generate two sets of ASM one vectorized and another normal and call the app
 case_study_1(int*, int*, int*):
         lea     rcx, [rdi+4]
         mov     rax, rdx
-        sub     rax, rcx
-        cmp     rax, 8
-        jbe     .L5
+        sub     rax, rcx              # Basic address arithmetic to look for overlap
+        cmp     rax, 8                # Check for overlap
+        jbe     .L5                   # Fallback to non vectorized .L5 if overlap is detected
         lea     rcx, [rsi+4]
         mov     rax, rdx
         sub     rax, rcx
-        cmp     rax, 8
-        jbe     .L5
+        cmp     rax, 8                # Check for overlap
+        jbe     .L5                   # Fallback to non vectorized .L5 if overlap is detected
         xor     eax, eax
 .L3:
         movdqu  xmm0, XMMWORD PTR [rdi+rax]
@@ -72,7 +72,7 @@ case_study_1(int*, int*, int*):
         ret
 ```
 
-## __restrict__
+## \_\_restrict\_\_
 
 This can be simplified by telling the compiler that these pointers will not overlap with the `__restrict__`, this will result in the compiler generating only vector instructions
 
@@ -87,7 +87,7 @@ void case_study_1(int *__restrict__ a, int *__restrict__ b, int *__restrict__ c)
 ```s
 case_study_1(int*, int*, int*):
         xor     eax, eax
-.L2:
+.L2:                                            # Vectorized loop
         movdqu  xmm0, XMMWORD PTR [rsi+rax]
         movdqu  xmm1, XMMWORD PTR [rdi+rax]
         paddd   xmm0, xmm1
@@ -104,6 +104,7 @@ Another way to achieve vectorization here is with the OpenMP directive `#pragma 
 
 ```cpp
 void case_study_1(int *a, int *b, int *c) {
+  // Note: Compiler assumes there is no overlap so this has to used when you are sure there will not be a overlap
   #pragma omp simd
   for (int i = 0; i < 1<<20; i++) {
     c[i] = a[i] + b[i];
@@ -114,7 +115,7 @@ void case_study_1(int *a, int *b, int *c) {
 ```s
 case_study_1(int*, int*, int*):
         xor     eax, eax
-.L2:
+.L2:                                          # Vectorized loop
         movdqu  xmm0, XMMWORD PTR [rsi+rax]
         movdqu  xmm1, XMMWORD PTR [rdi+rax]
         paddd   xmm0, xmm1
