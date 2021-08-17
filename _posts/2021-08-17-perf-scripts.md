@@ -6,7 +6,9 @@ tags: perf optimization hpc
 excerpt_separator: <!--more-->
 ---
 
-A small exploration into `perf script`.
+`perf` is a Performance analysis tools for Linux. `perf` can be used to provide useful statistics about your application `perf stat <>` or sampled and analysed with `perf record <app>`. When recording with perf we are left with a binary file `perf.data` which contains information of the all sampled events.
+
+Events from `perf.data` can be extracted and scripted on with `perf script`. There is very limited documentation and examples of `perf script`, so I'm going to be walking through the exploration I did with `perf script`. For this I'll be using a `perf.data` generated from an execution of an albeian sandpile model program.
 
 <!--more-->
 
@@ -26,6 +28,7 @@ perf script > out.perf
 
 What each field means
 
+```
 comm - sandpile
 tid - 1751
 event - cpu-clock:uhpppH
@@ -34,6 +37,7 @@ sym - Fractal::Sandpile::stabilize
 symoff - +0x24b
 time - 13289.335292
 dso - (/home/bench/sandpile)
+```
 
 If perf was recorded with `-g`, the output contains trace like this
 
@@ -189,3 +193,5 @@ while (<>) {
   print $fh $_ . "\n";
 }
 ```
+
+will generate `out-<pid1>.perf`, `out-<pid2>.perf`, `out-<pid3>.perf`
