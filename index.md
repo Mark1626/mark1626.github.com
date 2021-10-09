@@ -13,8 +13,11 @@ Hello and welcome to my site
 - [Micro Blog](/micro-blog/twtxt.txt)
 - [Projects](/projects)
 - ["Knowledge" Document Everything](/knowledge)
+- [Road to CPP and HPC](https://github.com/Mark1626/road-to-plus-plus)
 
 ## Recent Work
+
+Most of my work right now is going into my C++ journey repo [Road to C++ and HPC](https://github.com/Mark1626/road-to-plus-plus)  
 
 {% for pen in site.data.codepen %}
   <h2>{{ pen.name }}</h2>
