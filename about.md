@@ -7,9 +7,16 @@ title: About me
 
 # About Me
 
-Hi I'm Nimalan known as mark1626. I'm a developer that currently does High Performance Computing. 
-My areas of interest range from databases to DSLs. I do a lot of front-end when I get 
+Hi I'm Nimalan also known as mark1626. I'm a consultant for [Data Intensive Computing](https://en.wikipedia.org/wiki/Data-intensive_computing). 
+My areas of interest range from databases to DSLs. I do a bit of front-end when I get 
 the time for it
+
+**Areas of Interest**
+
+- Assembly
+- LISP
+- Human editable plain text databases(recutils)
+- Domain Specific Languages
 
 ## Acknowledgement
 
