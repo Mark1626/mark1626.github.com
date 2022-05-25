@@ -187,20 +187,18 @@ Index     0123456789
 
 Performance for 100 iterations
 
-------------------------------------------------------------------------------
-Method   | Instructions | Total Cycles | Total uOps | uOps Per Cycle |  IPC
----------|--------------|--------------|------------|----------------|--------
-idiv     | 500          | 1462         | 3800       | 2.60           | 0.34
-compiler | 800          | 234          | 1000       | 4.27           | 3.42
-fastmod  | 700          | 235          | 1000       | 4.26           |  2.98
------------------------------------------------------------------------------
+| Method   | Instructions | Total Cycles | Total uOps | uOps Per Cycle |  IPC   |
+| ---------|--------------|--------------|------------|----------------|--------|
+| idiv     | 500          | 1462         | 3800       | 2.60           | 0.34   |
+| compiler | 800          | 234          | 1000       | 4.27           | 3.42   |
+| fastmod  | 700          | 235          | 1000       | 4.26           |  2.98  |
 
 ## References
 
-1. Torbjörn Granlund and Peter L. Montgomery. Division by invariant integers using multiplication. SIGPLAN Not., 29(6):61-72, jun 1994. ISSN 0362-1340. doi: 10.1145/773473.178249. URL https://doi.org/10.1145/773473.178249.
+1. Torbjörn Granlund and Peter L. Montgomery. Division by invariant integers using multiplication. SIGPLAN Not., 29(6):61-72, jun 1994. ISSN 0362-1340. doi: 10.1145/773473.178249. URL [https://doi.org/10.1145/773473.178249](https://doi.org/10.1145/773473.178249).
 
-2. Daniel Lemire, Owen Kaser, and Nathan Kurz. Faster remainder by direct computation: Applications to compilers and software libraries. CoRR, abs/1902.01961, 2019. URL http://arxiv.org/abs/1902.01961.
+2. Daniel Lemire, Owen Kaser, and Nathan Kurz. Faster remainder by direct computation: Applications to compilers and software libraries. CoRR, abs/1902.01961, 2019. URL [http://arxiv.org/abs/1902.01961](http://arxiv.org/abs/1902.01961).
 
-3. Daniel Lemire [@lemire](https://github.com/lemire). fastmod. URL [https://github.com/lemire/fastmod.](https://github.com/lemire/fastmod)
+3. Daniel Lemire [@lemire](https://github.com/lemire). fastmod. URL [https://github.com/lemire/fastmod](https://github.com/lemire/fastmod).
 
-4. Peter Ammon [@ridiculousfish](https://github.com/ridiculousfish). libdivide. URL [https://github.com/ridiculousfish/libdivide.](https://github.com/ridiculousfish/libdivide)
+4. Peter Ammon [@ridiculousfish](https://github.com/ridiculousfish). libdivide. URL [https://github.com/ridiculousfish/libdivide](https://github.com/ridiculousfish/libdivide).
