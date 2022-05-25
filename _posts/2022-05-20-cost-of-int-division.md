@@ -63,7 +63,7 @@ Index     0123456789          01 ...
 
 ### Granlund-Montgomery algorithm
 
-The compiler uses Granlund-Montgomery's division algorithm [@10.1145/773473.178249] for division when the divisor is known.
+The compiler uses [Granlund-Montgomery's division algorithm](https://doi.org/10.1145/773473.178249) for division when the divisor is known.
 
 ```c
 /* Compiler optimizes to multiplication and shift instructions*/
@@ -122,13 +122,13 @@ Index     0123456789
 
 ### libdivide
 
-libdivide[@libdivide] replace the expensive integer divides with multiplication and bitshifts similar to the GM algorithm done by the compiler. But unlike the compiler libdivide can be used to optimize runtime constants. libdivide also allows division for SIMD vectors.
+[libdivide](https://github.com/ridiculousfish/libdivide) replace the expensive integer divides with multiplication and bitshifts similar to the GM algorithm done by the compiler. But unlike the compiler libdivide can be used to optimize runtime constants. libdivide also allows division for SIMD vectors.
 
 ### LKK algorithm
 
-Lemire Kaser Kurz(LKK) [@DBLP:journals/corr/abs-1902-01961] is another algorithm for unsigned integer division. It has similar performance to Granlund-Montgomery and is better for some divisors. This algorithm works best when we precompute the inverse of the divisor beforehand, and the divisor is to an extent a runtime constant.
+[Lemire Kaser Kurz(LKK)](http://arxiv.org/abs/1902.01961) is another algorithm for unsigned integer division. It has similar performance to Granlund-Montgomery and is better for some divisors. This algorithm works best when we precompute the inverse of the divisor beforehand, and the divisor is to an extent a runtime constant.
 
-A full implementation of LKK algorithm can be found in fastmod[@fastmod]
+A full implementation of LKK algorithm can be found in [fastmod](https://github.com/lemire/fastmod)
 
 ```c
 const uint32_t d = 9;
@@ -187,15 +187,13 @@ Index     0123456789
 
 Performance for 100 iterations
 
-------------------------------------------------------------------------
-Method    Instructions  Total Cycles  Total uOps  uOps Per Cycle  IPC
---------  ------------  ------------  ----------  --------------  ------
-idiv      500           1462          3800        2.60            0.34
-
-compiler  800           234           1000        4.27            3.42
-
-fastmod   700           235           1000        4.26            2.98
-------------------------------------------------------------------------
+------------------------------------------------------------------------------
+Method   | Instructions | Total Cycles | Total uOps | uOps Per Cycle |  IPC
+---------|--------------|--------------|------------|----------------|--------
+idiv     | 500          | 1462         | 3800       | 2.60           | 0.34
+compiler | 800          | 234          | 1000       | 4.27           | 3.42
+fastmod  | 700          | 235          | 1000       | 4.26           |  2.98
+-----------------------------------------------------------------------------
 
 ## References
 
@@ -203,6 +201,6 @@ fastmod   700           235           1000        4.26            2.98
 
 2. Daniel Lemire, Owen Kaser, and Nathan Kurz. Faster remainder by direct computation: Applications to compilers and software libraries. CoRR, abs/1902.01961, 2019. URL http://arxiv.org/abs/1902.01961.
 
-3. Daniel Lemire [@lemire](https://github.com/lemire). fastmod. URL https://github.com/lemire/fastmod.
+3. Daniel Lemire [@lemire](https://github.com/lemire). fastmod. URL [https://github.com/lemire/fastmod.](https://github.com/lemire/fastmod)
 
-4. Peter Ammon [@ridiculousfish](https://github.com/ridiculousfish). libdivide. URL https://github.com/ridiculousfish/libdivide.
+4. Peter Ammon [@ridiculousfish](https://github.com/ridiculousfish). libdivide. URL [https://github.com/ridiculousfish/libdivide.](https://github.com/ridiculousfish/libdivide)
